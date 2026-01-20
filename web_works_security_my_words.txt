@@ -1,0 +1,29 @@
+### DNS
+
+- DNS: domain name system is the phonebook of the internet
+- When we type in a website like github.com, the DNS connects to IP address
+- Cache
+    - Browser level cache
+    - Os level cache
+    - ISP(Internet service provider) level cache
+    - Finally, if these do not have the address, DNS llokup checks for 
+        - .com addresses
+        - then github.com
+- Techniques used to avoid DNS bottlenecks
+    - Round Robin DNS
+        - DNS returns multiple IP addresses for single website
+    - Load balancers
+        - Multiple servers histed by big websites to evenly distribute traffic
+    - Geographic DNS
+        - For people of a certain area are served with that area's severs
+
+### socket opening + TLS
+
+- First the broswer(client) sends an unencrypted message (ClientHello) to server which says which encryption methods and TLS version is there
+- Then server sends (ServerHello) certificate containing server's public key + signed by Certificate Authority 
+- Browser/client verifies the certificate
+- Broswer genrates random bytes and locks it using the server's public keys, sends it to server. Only server can open this key because it has the private key
+- Server decrypts message using its private key, uses same random  bytes to generate symmetric key. Both sides have same symmetric key
+- client sends "finished" message, server then does the same
+
+### HTTP protocol
