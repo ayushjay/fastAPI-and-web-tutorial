@@ -4,9 +4,9 @@
 - When we type in a website like github.com, the DNS connects to IP address
 - Cache
     - Browser level cache
-    - Os level cache
+    - OS level cache
     - ISP(Internet service provider) level cache
-    - Finally, if these do not have the address, DNS llokup checks for 
+    - Finally, if these do not have the address, DNS lookup checks for 
         - .com addresses
         - then github.com
 - Techniques used to avoid DNS bottlenecks
